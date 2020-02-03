@@ -5,49 +5,34 @@ class Navbar extends Component {
     render() {
         
         return (
-
-      <div>
-
-
-            <nav class="navbar navbar-inverse">
-      <div class="container">
-        
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Bootstrap CheatSheet</a>
-        </div>
-
-        
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
+       <div>
+          <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+          <div className="container">
+            <a href="index.html" className="navbar-brand">LooLap</a>
+            <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                         <span className="navbar-toggler-icon"></span>
+                     </button>
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <a href="#home" className="nav-link">Home</a>
+                </li>
+                <li className="nav-item">
+                  <a href="#explore-head-section" className="nav-link">Explore</a>
+                </li>
+                <li className="nav-item">
+                  <a href="#create-head-section" className="nav-link">Create</a>
+                </li>
+                <li className="nav-item">
+                  <a href="#share-head-section" className="nav-link">Share</a>
+                </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
+        </nav>
         </div>
-      </div>
-    </nav>
-
-   </div>
-
             
-           )}
+      )}
 }
 
 export default Navbar;
