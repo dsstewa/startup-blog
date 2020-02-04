@@ -10,3 +10,5 @@ post_b = Blogpost.create(subject: "Some awesome blog title", content: "We raised
 post_c = Blogpost.create(subject: "another great blog title", content: "it is snowing in co", uuid: 1244468)
 post_d = Blogpost.create(subject: "made another great title", content: "we are killing it", uuid: 1239998)
 
+email_a = Contact.create(firstName: "Bill", lastName: "Ron", email: "Bill@bill.com", uuid: 1239998)
+email_b = Contact.create(firstName: "Ron", lastName: "Johnson", email: "Ron@Johnson.com", uuid: 1239998)
