@@ -22,17 +22,6 @@ export default class Blog extends Component {
           </div>
         </div>
       </section>
-      <section id="explore-section" className="bg-light text-muted py-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-mg-6">
-              <img src="img/credit.jpg" alt="" className="img-fluid mb-3 rounded-circle"/>
-            </div>
-            <div className="col-mg-6"></div>
-          </div>
-        </div>
-      </section>
-
     );
   }
 }
