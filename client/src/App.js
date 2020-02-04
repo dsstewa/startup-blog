@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import HomeSection from "./components/HomeSection";
-import Blog from "./components/Blog";
+import Homecontainer from "./containers/Homecontainer";
+
+
 function App() {
   return (
     <div>
       <Navbar />
-      <HomeSection />
-      <Blog />
+     <Homecontainer />
     </div>
   );
 }

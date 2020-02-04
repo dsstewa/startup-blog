@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Signup from "./Signup"
 export default class HomeSection extends Component {
   render() {
     return (
@@ -42,40 +42,7 @@ export default class HomeSection extends Component {
                   </div>
                 </div>
                 <div className="col-lg-4">
-                  <div className="card bg-primary text-center card-form">
-                    <div className="card-body">
-                      <h3>Sign up Today</h3>
-                      <p>for Vendrix updates!</p>
-                      <form>
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            class="form-control form-control-lg"
-                            placeholder="firstname"
-                          />
-                        </div>
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            class="form-control form-control-lg"
-                            placeholder="lastname"
-                          />
-                        </div>
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            class="form-control form-control-lg"
-                            placeholder="email"
-                          />
-                        </div>
-                        <input
-                          type="submit"
-                          value="Submit"
-                          className="btn btn-outline-light btn-block"
-                        />
-                      </form>
-                    </div>
-                  </div>
+                  <Signup />
                 </div>
               </div>
             </div>
