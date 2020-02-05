@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Infosection from "../components/Infosection";
 import Signup from "../components/Signup";
 import { connect } from "react-redux";
+import Infocard from "../components/infocards/democard";
 
 class Homecontainer extends Component {
   render() {

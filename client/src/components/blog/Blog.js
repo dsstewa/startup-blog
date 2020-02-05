@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Blog extends Component {
   render() {
     return (
-      <div className="post-preview">
+      <div className="post-preview blog-post">
         <a href="post.html">
           <h2 className="post-title">
             Man must explore, and this is exploration at its greatest

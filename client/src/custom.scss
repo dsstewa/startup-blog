@@ -46,3 +46,17 @@ body {
     font-size: $icon-size;
   }
 }
+
+#blog-section {
+  .fa {
+    color: white;
+    background: #333;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $icon-size;
+  }
+}
+
+.new-blog-post {
+  padding-top: 50px;
+}

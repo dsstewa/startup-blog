@@ -9,12 +9,6 @@ import manageBlog from "./reducers/manageBlog";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 
-//boot strap import
-//import "bootstrap/dist/css/bootstrap.min.css";
-import $ from "jquery";
-import Popper from "popper.js";
-import "bootstrap/dist/js/bootstrap.bundle.min";
-
 const store = createStore(
   manageBlog,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
