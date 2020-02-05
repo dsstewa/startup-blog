@@ -3,25 +3,21 @@ import React, { Component } from "react";
 export default class Blog extends Component {
   render() {
     return (
-      <section id="explore-head-section">
-        <div className="container">
-          <div className="row">
-            <div className="col text-center">
-              <div className="p-5">
-                <h1 className="display-4">Blog</h1>
-                <p className="lead">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Deserunt temporibus numquam unde odit quos esse impedit labore
-                  voluptatum a dolor.
-                </p>
-                <a href="" className="btn btn-outline-secondary">
-                  Find Out More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="post-preview">
+        <a href="post.html">
+          <h2 className="post-title">
+            Man must explore, and this is exploration at its greatest
+          </h2>
+          <h3 className="post-subtitle">
+            Problems look mighty small from 150 miles up
+          </h3>
+        </a>
+        <p className="post-meta">
+          Posted by
+          <a href="#">Start Bootstrap</a>
+          on September 24, 2019
+        </p>
+      </div>
     );
   }
 }
