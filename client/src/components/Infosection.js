@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Signup from "./Signup"
+import Signup from "./Signup";
 export default class HomeSection extends Component {
   render() {
     return (
@@ -42,7 +42,7 @@ export default class HomeSection extends Component {
                   </div>
                 </div>
                 <div className="col-lg-4">
-                  <Signup />
+                  <Signup addUser={this.props.addUser} />
                 </div>
               </div>
             </div>
