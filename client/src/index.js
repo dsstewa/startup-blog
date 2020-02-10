@@ -7,12 +7,14 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import manageBlog from "./reducers/manageBlog";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware} from "redux";
+import thunk from 'redux-thunk'
 
 const store = createStore(
-  manageBlog,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  manageBlog, applyMiddleware(thunk)
 );
+
+// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
 ReactDOM.render(
   <Provider store={store}>
