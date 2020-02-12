@@ -3,20 +3,16 @@ import React, { Component } from "react";
 export default class Blog extends Component {
   render() {
     return (
-      <div className="post-preview blog-post">
-        <a href="post.html">
-          <h2 className="post-title">
-            Man must explore, and this is exploration at its greatest
-          </h2>
-          <h3 className="post-subtitle">
-            Problems look mighty small from 150 miles up
-          </h3>
-        </a>
-        <p className="post-meta">
-          Posted by
-          <a href="#">Start Bootstrap</a>
-          on September 24, 2019
-        </p>
+      <div className="card">
+        <h5 className="card-header">{this.props.subject}</h5>
+        <div className="card-body">
+          <p className="card-text">{this.props.content}</p>
+          <p class="card-text">
+            <small class="text-muted">
+              Post by: {this.props.name} {" on "} {this.props.date}
+            </small>
+          </p>
+        </div>
       </div>
     );
   }

@@ -3,6 +3,8 @@ class CreateBlogposts < ActiveRecord::Migration[6.0]
     create_table :blogposts do |t|
       t.string :subject
       t.text :content
+      t.string :firstname
+      t.string :lastname
       t.string :uuid
       t.timestamps
     end

@@ -1,7 +1,7 @@
 import cuid from "cuid";
 export const cuidFn = cuid;
 
-export default function manageBlog(state = {}, action) {
+export default function manageBlog(state = {blogposts: [], loading: false}, action) {
   switch (action.type) {
     case "ADD_USER":
       console.log("user Added in Redux");
@@ -9,10 +9,20 @@ export default function manageBlog(state = {}, action) {
     
     case "FETCHING_BLOGPOSTS":
       console.log("in the proccess of getting the post")
-      return state;
+      
+      return {
+        ...state,
+        blogposts: [...state.blogposts],
+        loading: true
+      }
+
+
     case 'ADD_POSTS':
-    console.log("you are adding blog posts")
-    return state;
+    return {
+      ...state, 
+      blogposts: action.blogposts,
+      loading: false
+    }
 
     default:
       console.log("Default Returned");

@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 2020_02_04_172311) do
   create_table "blogposts", force: :cascade do |t|
     t.string "subject"
     t.text "content"
+    t.string "firstname"
+    t.string "lastname"
     t.string "uuid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
