@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NewBlog from "../components/blog/Newblog";
 import { connect } from "react-redux";
-import { newBlogPosts } from "../actions/fetchBlogPosts";
+import { newBlogPosts } from "../actions/index";
 
 class Newblogpost extends Component {
   render() {

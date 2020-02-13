@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Blogheader from "../components/blog/Blogheader";
-import { fetchBlogPosts, deleteBlogPost } from "../actions/fetchBlogPosts";
+import { fetchBlogPosts, deleteBlogPost } from "../actions/index";
 import { connect } from "react-redux";
 import Blogs from "../components/blog/Blogs";
 
@@ -10,7 +10,6 @@ class Blogcontainer extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <Blogheader />
@@ -29,11 +28,12 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => ({
-  fetchBlogPosts: () => dispatch(fetchBlogPosts()),
-  deleteBlogPost: () => dispatch(deleteBlogPost())
-});
-
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchBlogPosts: () => dispatch(fetchBlogPosts()),
+    deleteBlogPost: post => deleteBlogPost(post)
+  };
+};
 export default connect(
   mapStateToProps,
   mapDispatchToProps

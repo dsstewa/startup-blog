@@ -7,12 +7,9 @@ export default function manageBlog(
 ) {
   switch (action.type) {
     case "ADD_USER":
-      console.log("user Added in Redux");
       return state;
 
     case "FETCHING_BLOGPOSTS":
-      console.log("in the proccess of getting the post");
-
       return {
         ...state,
         blogposts: [...state.blogposts],
@@ -26,6 +23,9 @@ export default function manageBlog(
         loading: false
       };
 
+    case "DELETE_POST":
+      debugger;
+      return state;
     default:
       console.log("Default Returned");
       return state;

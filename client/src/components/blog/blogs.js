@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Blog from "./Blog";
-import Blogheader from "./Blogheader";
 
 export default class Blogs extends Component {
   render() {
@@ -16,7 +15,7 @@ export default class Blogs extends Component {
       />
     ));
     return (
-      <section id="blog-section" class="bg-light text-muted py-5">
+      <section id="blog-section" className="bg-light text-muted py-5">
         <div className="container">
           <div className="col text-left">{posts}</div>
         </div>

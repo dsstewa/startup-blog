@@ -12,7 +12,10 @@ export default class Blogheader extends Component {
                 <p className="lead">
                   Please take a look at the following updates for Vendrix!
                 </p>
-                <a href="#" className="btn btn-outline-secondary">
+                <a
+                  href="https://google.com"
+                  className="btn btn-outline-secondary"
+                >
                   Find Out More
                 </a>
               </div>
