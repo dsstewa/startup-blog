@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Homecontainer from "./containers/Homecontainer";
 import Blogcontainer from "./containers/Blogcontainer";
-import Newblogpost from "./components/blog/Newblogpost";
+import Newblogpost from "./containers/Newblogpost";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 function App() {
