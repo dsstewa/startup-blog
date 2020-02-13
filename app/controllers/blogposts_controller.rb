@@ -1,3 +1,4 @@
+
 class BlogpostsController < ApplicationController
     
     def index
@@ -6,9 +7,16 @@ class BlogpostsController < ApplicationController
     end
 
     def create 
-        blogs = Blogpost.all
-        binding.pry
-        render json: blogs
+        blog = Blogpost.create(
+            firstname: params[:firstname],
+            lastname: params[:lastname],
+            subject: params[:subject],
+            content: params[:content],
+            uuid: params[:uuid]
+        )
+        blog.save
+
+        render json: BlogpostSerializer.new(blog)
     end 
 
 

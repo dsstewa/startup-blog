@@ -27,6 +27,6 @@ export function newBlogPosts(data) {
   };
 
   return dispatch => {
-    fetch("http://localhost:3001/blogposts/new", configObj);
+    fetch("http://localhost:3001/blogposts", configObj);
   };
 }
