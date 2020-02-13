@@ -7,10 +7,12 @@ export default class Blogs extends Component {
     const posts = this.props.blogPosts.map(post => (
       <Blog
         key={post.id}
+        id={post.id}
         subject={post.subject}
         content={post.content}
         date={post.created_at}
         name={`${post.firstname} ${post.lastname}`}
+        deleteBlogPost={this.props.deleteBlogPost}
       />
     ));
     return (

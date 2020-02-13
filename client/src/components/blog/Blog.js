@@ -4,7 +4,19 @@ export default class Blog extends Component {
   render() {
     return (
       <div className="card">
-        <h5 className="card-header">{this.props.subject}</h5>
+        <div className="card-header">
+          <h4>
+            {this.props.subject}{" "}
+            <button
+              type="button"
+              class="btn btn-danger pull-right"
+              onClick={this.props.deleteBlogPost}
+            >
+              Delete Post
+            </button>
+          </h4>
+        </div>
+
         <div className="card-body">
           <p className="card-text">{this.props.content}</p>
           <p class="card-text">

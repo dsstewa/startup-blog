@@ -25,8 +25,30 @@ export function newBlogPosts(data) {
     },
     body: JSON.stringify(postData)
   };
-
   return dispatch => {
     fetch("http://localhost:3001/blogposts", configObj);
   };
+}
+
+export function deleteBlogPost(data) {
+  console.log("you hit the action");
+  // const postData = {
+  //   subject: data.subject,
+  //   content: data.content,
+  //   firstname: "Bill",
+  //   lastname: "Ron",
+  //   uuid: "1234"
+  // };
+
+  // const configObj = {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //     Accept: "application/json"
+  //   },
+  //   body: JSON.stringify(postData)
+  // };
+  // return dispatch => {
+  //   fetch("http://localhost:3001/blogposts", configObj);
+  // };
 }
