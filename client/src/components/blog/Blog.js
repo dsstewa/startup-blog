@@ -9,10 +9,17 @@ export default class Blog extends Component {
             {this.props.subject}{" "}
             <button
               type="button"
-              className="btn btn-danger pull-right"
+              className="btn btn-danger pull-right ml-3"
               onClick={() => this.props.deleteBlogPost(this.props.id)}
             >
               Delete Post
+            </button>
+            <button
+              type="button"
+              class="btn btn-success pull-right pl-4 pr-4"
+              onClick={() => this.props.editBlogPost(this.props.id)}
+            >
+              Edit
             </button>
           </h4>
         </div>

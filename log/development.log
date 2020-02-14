@@ -5789,3 +5789,138 @@ Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 2342)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("firstName", "lastName", "email", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["firstName", "Ron"], ["lastName", "Johnson"], ["email", "Ron@Johnson.com"], ["uuid", "1239998"], ["created_at", "2020-02-14 00:54:37.239476"], ["updated_at", "2020-02-14 00:54:37.239476"]]
   [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/blogposts" for ::1 at 2020-02-13 17:56:41 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 1.4ms | Allocations: 6908)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 17:57:38 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1130)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 17:58:15 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1130)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 17:58:33 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1130)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 17:58:40 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 17:59:01 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 17:59:10 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1130)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 17:59:18 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 17:59:20 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 17:59:38 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 17:59:49 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 17:59:55 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 18:00:25 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 18:00:32 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 18:00:35 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 18:00:41 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 18:01:08 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 18:02:11 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1113)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-13 18:04:37 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1113)
+
+
