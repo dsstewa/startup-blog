@@ -24,8 +24,14 @@ export default function manageBlog(
       };
 
     case "DELETE_POST":
-      debugger;
-      return state;
+      const blogposts = state.blogposts.filter(
+        blog => blog.id !== action.payload
+      );
+
+      return {
+        ...state,
+        blogposts
+      };
     default:
       console.log("Default Returned");
       return state;

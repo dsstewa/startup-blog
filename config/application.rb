@@ -25,8 +25,8 @@ module StartupBlog
     config.load_defaults 6.0
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-         origins 'localhost:3000'
-         resource '*', :headers => :any, :methods => [:get, :post, :options]
+         origins '*'
+         resource '*', :headers => :any, :methods => [:get, :post, :options, :delete]
        end
     end
 

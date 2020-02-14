@@ -29,7 +29,24 @@ export function newBlogPosts(data) {
   };
 }
 
-export function deleteBlogPost(post) {
-  debugger;
-  console.log("you hit the delete action");
-}
+export const deleteBlogPost = post => {
+  const formData = {
+    id: post
+  };
+  const configObj = {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: JSON.stringify(formData)
+  };
+
+  return dispatch => {
+    fetch(`http://localhost:3001/blogposts/${post}`, configObj)
+      .then(response => response.json())
+      .then(response => {
+        dispatch({ type: "DELETE_POST", payload: post });
+      });
+  };
+};

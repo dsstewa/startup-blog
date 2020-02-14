@@ -1,4 +1,4 @@
-
+require 'pry'
 class BlogpostsController < ApplicationController
     
     def index
@@ -17,6 +17,16 @@ class BlogpostsController < ApplicationController
         blog.save
 
         render json: BlogpostSerializer.new(blog)
+    end 
+
+    def show  
+        post = Blogpost.find_by(id: params[:id])
+        render json: BlogpostSerializer.new(post)
+    end
+
+    def destroy
+        post= Blogpost.find_by(id: params[:id]).destroy
+        render json: BlogpostSerializer.new(post)
     end 
 
 

@@ -31,7 +31,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchBlogPosts: () => dispatch(fetchBlogPosts()),
-    deleteBlogPost: post => deleteBlogPost(post)
+    deleteBlogPost: post => dispatch(deleteBlogPost(post))
   };
 };
 export default connect(
