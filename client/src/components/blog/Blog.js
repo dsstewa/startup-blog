@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 export default class Blog extends Component {
   render() {
+    console.log(this.props)
     return (
       <div className="card">
         <div className="card-header">
@@ -16,7 +17,7 @@ export default class Blog extends Component {
             <button
               type="button"
               class="btn btn-success pull-right pl-4 pr-4"
-              onClick={() => this.props.editBlogPost(this.props.id)}
+              onClick={() => this.props.editBlogPost()}
             >
               Edit
             </button>

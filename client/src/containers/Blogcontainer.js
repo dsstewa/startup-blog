@@ -16,7 +16,6 @@ class Blogcontainer extends Component {
         <Blogs
           blogPosts={this.props.blogPosts}
           deleteBlogPost={this.props.deleteBlogPost}
-          editBlogPost={this.props.editBlogPost}
         />
       </div>
     );
@@ -32,8 +31,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchBlogPosts: () => dispatch(fetchBlogPosts()),
-    deleteBlogPost: post => dispatch(deleteBlogPost(post)),
-    editBlogPost: () => console.log("You hit the edit button")
+    deleteBlogPost: post => dispatch(deleteBlogPost(post))
   };
 };
 export default connect(
