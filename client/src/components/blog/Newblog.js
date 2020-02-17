@@ -1,12 +1,17 @@
 import React, { PureComponent } from "react";
 
 export default class Newblog extends PureComponent {
-  constructor() {
-    super();
-    this.state = {
-      subject: "",
-      content: ""
-    };
+  state = {
+    subject: "",
+    content: ""
+  };
+
+  componentDidMount() {
+    this.setState({
+      subject: this.props.subject,
+      content: this.props.content
+    });
+    debugger;
   }
 
   handleChange = event => {
@@ -19,13 +24,10 @@ export default class Newblog extends PureComponent {
   handleSubmit = event => {
     event.preventDefault();
     this.props.newBlogPost(this.state);
-    this.setState = {
-      subject: "",
-      content: ""
-    };
   };
 
   render() {
+    debugger;
     return (
       <section className="new-blog-post">
         <div className="container">
