@@ -1,11 +1,11 @@
-export function fetchBlogPosts() {
+export const fetchBlogPosts = () => {
   return dispatch => {
     dispatch({ type: "FETCHING_BLOGPOSTS" });
     fetch("http://localhost:3001/blogposts")
       .then(response => response.json())
-      .then(blogposts => dispatch({ type: "ADD_POSTS", blogposts }));
+      .then(blogposts => dispatch({ type: "LOAD_BLOGPOSTS", blogposts }));
   };
-}
+};
 
 export function newBlogPosts(data) {
   const postData = {
@@ -25,7 +25,9 @@ export function newBlogPosts(data) {
     body: JSON.stringify(postData)
   };
   return dispatch => {
-    fetch("http://localhost:3001/blogposts", configObj);
+    fetch("http://localhost:3001/blogposts", configObj)
+      .then(response => response.json())
+      .then(post => dispatch({ type: "ADD_POST", post }));
   };
 }
 
@@ -47,6 +49,35 @@ export const deleteBlogPost = post => {
       .then(response => response.json())
       .then(response => {
         dispatch({ type: "DELETE_POST", payload: post });
+      });
+  };
+};
+
+export const editBlogPost = post => {
+  return dispatch => {
+    dispatch({ type: "EDIT_POST", post });
+  };
+};
+
+export const updateBlogPost = post => {
+  const formData = {
+    subject: "test",
+    content: "test"
+  };
+  const configObj = {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: JSON.stringify(formData)
+  };
+  debugger;
+  return dispatch => {
+    fetch(`http://localhost:3001/blogposts/${post.id}`, configObj)
+      .then(response => response.json())
+      .then(response => {
+        dispatch({ type: "UPDATE_POST", payload: post });
       });
   };
 };

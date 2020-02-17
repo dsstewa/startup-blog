@@ -1,10 +1,11 @@
 import React, { PureComponent } from "react";
 import { Redirect } from "react-router-dom";
 
-export default class Newblog extends PureComponent {
+export default class Editblog extends PureComponent {
   state = {
-    subject: "",
-    content: ""
+    id: this.props.post.id,
+    subject: this.props.post.subject,
+    content: this.props.post.content
   };
 
   handleChange = event => {
@@ -16,7 +17,7 @@ export default class Newblog extends PureComponent {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.newBlogPost(this.state);
+    this.props.updateBlogPost(this.state);
     this.setState({
       redirect: true
     });
@@ -38,6 +39,7 @@ export default class Newblog extends PureComponent {
                 id="subject"
                 name="subject"
                 rows="1"
+                defaultValue={this.props.post.subject}
                 onChange={this.handleChange}
               ></input>
               <label for="blogbody">Blog Content</label>
@@ -45,6 +47,7 @@ export default class Newblog extends PureComponent {
                 class="form-control"
                 id="content"
                 name="content"
+                defaultValue={this.props.post.content}
                 onChange={this.handleChange}
                 rows="10"
               ></textarea>

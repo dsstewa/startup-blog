@@ -7,11 +7,15 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import manageBlog from "./reducers/manageBlog";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware} from "redux";
-import thunk from 'redux-thunk'
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
 
 const store = createStore(
-  manageBlog, applyMiddleware(thunk)
+  manageBlog,
+  compose(
+    applyMiddleware(thunk),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+  )
 );
 
 // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
