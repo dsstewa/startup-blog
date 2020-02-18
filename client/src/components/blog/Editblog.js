@@ -32,10 +32,10 @@ export default class Editblog extends PureComponent {
       <section className="new-blog-post">
         <div className="container">
           <form onSubmit={this.handleSubmit}>
-            <div class="form-group p-4">
+            <div className="form-group p-4">
               <label for="blogsubject">Subject</label>
               <input
-                class="form-control"
+                className="form-control"
                 id="subject"
                 name="subject"
                 rows="1"
@@ -44,7 +44,7 @@ export default class Editblog extends PureComponent {
               ></input>
               <label for="blogbody">Blog Content</label>
               <textarea
-                class="form-control"
+                className="form-control"
                 id="content"
                 name="content"
                 defaultValue={this.props.post.content}

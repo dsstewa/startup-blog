@@ -40,7 +40,7 @@ const mapDispatchToProps = dispatch => {
     fetchBlogPosts: () => dispatch(fetchBlogPosts()),
     deleteBlogPost: post => dispatch(deleteBlogPost(post)),
     editBlogPost: post => dispatch(editBlogPost(post)),
-    updateBlogPost: post => updateBlogPost(post)
+    updateBlogPost: post => dispatch(updateBlogPost(post))
   };
 };
 export default connect(

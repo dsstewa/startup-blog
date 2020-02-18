@@ -56,8 +56,10 @@ export default function manageBlog(
         blogposts: updated
       };
     case "UPDATE_POST":
-      debugger;
-      return state;
+      return {
+        ...state,
+        blogposts: [...state.blogposts, action.payload]
+      };
 
     default:
       console.log("Default Returned");

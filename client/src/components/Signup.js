@@ -11,7 +11,6 @@ class Signup extends Component {
   }
 
   handleChange = event => {
-    console.log(this.state);
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -28,7 +27,6 @@ class Signup extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <div className="card bg-primary text-center card-form">
         <div className="card-body">

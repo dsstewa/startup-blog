@@ -26,8 +26,9 @@ class BlogpostsController < ApplicationController
 
 
     def update  
-        binding.pry
+        
         post = Blogpost.find_by(id: params[:id])
+        post.update(subject: params[:subject], content: params[:content])
         render json: BlogpostSerializer.new(post)
     end
 

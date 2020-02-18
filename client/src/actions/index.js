@@ -61,8 +61,8 @@ export const editBlogPost = post => {
 
 export const updateBlogPost = post => {
   const formData = {
-    subject: "test",
-    content: "test"
+    subject: post.subject,
+    content: post.content
   };
   const configObj = {
     method: "PUT",
@@ -72,12 +72,14 @@ export const updateBlogPost = post => {
     },
     body: JSON.stringify(formData)
   };
-  debugger;
   return dispatch => {
     fetch(`http://localhost:3001/blogposts/${post.id}`, configObj)
       .then(response => response.json())
       .then(response => {
         dispatch({ type: "UPDATE_POST", payload: post });
+      })
+      .catch(error => {
+        console.error(error);
       });
   };
 };
