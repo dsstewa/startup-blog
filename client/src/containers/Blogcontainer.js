@@ -31,7 +31,7 @@ class Blogcontainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    blogPosts: state.blogposts
+    blogPosts: state.blogposts.posts
   };
 };
 
@@ -43,7 +43,4 @@ const mapDispatchToProps = dispatch => {
     updateBlogPost: post => dispatch(updateBlogPost(post))
   };
 };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Blogcontainer);
+export default connect(mapStateToProps, mapDispatchToProps)(Blogcontainer);

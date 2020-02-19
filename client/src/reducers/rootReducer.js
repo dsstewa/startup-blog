@@ -1,10 +1,12 @@
 import { combineReducers } from "redux";
 import manageBlog from "./manageBlog";
+import userAuth from "./userAuth";
 import manageContacts from "./manageContacts";
 
 const rootReducer = combineReducers({
-  blogs: manageBlog,
-  contanct: manageContacts
+  blogposts: manageBlog,
+  userAuth: userAuth
+  // contacts: manageContacts
 });
 
 export default rootReducer;

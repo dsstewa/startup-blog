@@ -1,10 +1,7 @@
 import cuid from "cuid";
 export const cuidFn = cuid;
 
-export default function manageBlog(
-  state = { blogposts: [], logger_in: false, loading: false },
-  action
-) {
+export default function manageBlog(state = { posts: [] }, action) {
   switch (action.type) {
     case "ADD_USER":
       return state;
@@ -13,7 +10,7 @@ export default function manageBlog(
       console.log("fetching blogposts aciton");
       return {
         ...state,
-        blogposts: [...state.blogposts],
+        posts: [...state.posts],
         loading: true
       };
 
@@ -21,28 +18,27 @@ export default function manageBlog(
       console.log("Loading blogpost action");
       return {
         ...state,
-        blogposts: action.blogposts,
+        posts: action.blogposts,
         loading: false
       };
 
     case "ADD_POST":
       return {
         ...state,
-        blogposts: [...state.blogposts, action.post.data.attributes],
+        posts: [...state.posts, action.post.data.attributes],
         loading: false
       };
 
     case "DELETE_POST":
-      const blogposts = state.blogposts.filter(
-        blog => blog.id !== action.payload
-      );
+      const blogposts = state.posts.filter(blog => blog.id !== action.payload);
+
       return {
         ...state,
-        blogposts
+        posts: blogposts
       };
 
     case "EDIT_POST":
-      const updated = state.blogposts.map(post => {
+      const updated = state.posts.map(post => {
         if (post.id === action.post) {
           post["editing"] = true;
           return post;
@@ -53,12 +49,12 @@ export default function manageBlog(
       console.log("You hit the update post Reducer");
       return {
         ...state,
-        blogposts: updated
+        posts: updated
       };
     case "UPDATE_POST":
       return {
         ...state,
-        blogposts: [...state.blogposts, action.payload]
+        posts: [...state.posts, action.payload]
       };
 
     default:

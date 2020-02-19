@@ -5,10 +5,10 @@ import "./custom.scss";
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import rootReducer from "./reducers/rootReducer";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
+import rootReducer from "./reducers/rootReducer";
 
 const store = createStore(
   rootReducer,
