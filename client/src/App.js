@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Homecontainer from "./containers/Homecontainer";
 import Blogcontainer from "./containers/Blogcontainer";
 import Newblogpost from "./containers/Newblogpost";
