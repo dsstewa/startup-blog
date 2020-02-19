@@ -5,13 +5,13 @@ import "./custom.scss";
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import manageBlog from "./reducers/manageBlog";
+import rootReducer from "./reducers/rootReducer";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 
 const store = createStore(
-  manageBlog,
+  rootReducer,
   compose(
     applyMiddleware(thunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f
