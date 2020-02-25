@@ -40,8 +40,7 @@ export default function manageBlog(state = { posts: [] }, action) {
     case "EDIT_POST":
       const updated = state.posts.map(post => {
         if (post.id === action.post) {
-          post["editing"] = true;
-          return post;
+          return { ...post, editing: true };
         } else {
           return post;
         }
@@ -52,9 +51,17 @@ export default function manageBlog(state = { posts: [] }, action) {
         posts: updated
       };
     case "UPDATE_POST":
+      const updatepost = state.posts.map(post => {
+        if (post.id === action.payload.id) {
+          return action.payload;
+        } else {
+          return post;
+        }
+      });
+
       return {
         ...state,
-        posts: [...state.posts, action.payload]
+        posts: updatepost
       };
 
     default:

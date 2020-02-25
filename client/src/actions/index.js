@@ -72,14 +72,17 @@ export const updateBlogPost = post => {
     },
     body: JSON.stringify(formData)
   };
+  console.log("b");
   return dispatch => {
     fetch(`http://localhost:3001/blogposts/${post.id}`, configObj)
       .then(response => response.json())
       .then(response => {
+        console.log("c");
         dispatch({ type: "UPDATE_POST", payload: post });
       })
       .catch(error => {
         console.error(error);
       });
   };
+  console.log("d");
 };

@@ -11113,3 +11113,377 @@ Processing by BlogpostsController#index as */*
 Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.9ms | Allocations: 6908)
 
 
+Started GET "/blogposts" for ::1 at 2020-02-24 18:08:14 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 67ms (Views: 62.5ms | ActiveRecord: 1.0ms | Allocations: 6907)
+
+
+Started POST "/blogposts" for ::1 at 2020-02-24 18:09:04 -0700
+Processing by BlogpostsController#create as JSON
+  Parameters: {"subject"=>"test Post 3", "content"=>"Test Post", "firstname"=>"Bill", "lastname"=>"Ron", "uuid"=>"1234", "blogpost"=>{"subject"=>"test Post 3", "content"=>"Test Post", "firstname"=>"Bill", "lastname"=>"Ron", "uuid"=>"1234"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+  [1m[36mBlogpost Create (0.9ms)[0m  [1m[32mINSERT INTO "blogposts" ("subject", "content", "firstname", "lastname", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["subject", "test Post 3"], ["content", "Test Post"], ["firstname", "Bill"], ["lastname", "Ron"], ["uuid", "1234"], ["created_at", "2020-02-25 01:09:04.087622"], ["updated_at", "2020-02-25 01:09:04.087622"]]
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+Completed 200 OK in 30ms (Views: 0.9ms | ActiveRecord: 3.9ms | Allocations: 4485)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:09:04 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1311)
+
+
+Started PUT "/blogposts/2" for ::1 at 2020-02-24 18:09:39 -0700
+Processing by BlogpostsController#update as JSON
+  Parameters: {"subject"=>"Gainvest and Interesting Starup", "content"=>"The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup ssDsadaSDasd", "id"=>"2", "blogpost"=>{"subject"=>"Gainvest and Interesting Starup", "content"=>"The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup ssDsadaSDasd"}}
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[36mBlogpost Update (0.9ms)[0m  [1m[33mUPDATE "blogposts" SET "content" = ?, "updated_at" = ? WHERE "blogposts"."id" = ?[0m  [["content", "The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup ssDsadaSDasd"], ["updated_at", "2020-02-25 01:09:39.084818"], ["id", 2]]
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+Completed 200 OK in 30ms (Views: 0.7ms | ActiveRecord: 6.8ms | Allocations: 4933)
+
+
+Started DELETE "/blogposts/3" for ::1 at 2020-02-24 18:09:51 -0700
+Processing by BlogpostsController#destroy as JSON
+  Parameters: {"id"=>"3", "blogpost"=>{"id"=>"3"}}
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:36:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:36:in `destroy'
+  [1m[36mBlogpost Destroy (0.4ms)[0m  [1m[31mDELETE FROM "blogposts" WHERE "blogposts"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/blogposts_controller.rb:36:in `destroy'
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:36:in `destroy'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 2388)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:16:16 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1137)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:16:54 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 1115)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:17:12 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1113)
+
+
+Started PUT "/blogposts/2" for ::1 at 2020-02-24 18:26:14 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlogpostsController#update as JSON
+  Parameters: {"subject"=>"Gainvest and Interesting Starup1", "content"=>"The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup ssDsadaSDasd", "id"=>"2", "blogpost"=>{"subject"=>"Gainvest and Interesting Starup1", "content"=>"The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup ssDsadaSDasd"}}
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[36mBlogpost Update (1.7ms)[0m  [1m[33mUPDATE "blogposts" SET "subject" = ?, "updated_at" = ? WHERE "blogposts"."id" = ?[0m  [["subject", "Gainvest and Interesting Starup1"], ["updated_at", "2020-02-25 01:26:14.556943"], ["id", 2]]
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 4.9ms | Allocations: 2828)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:29:00 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1136)
+
+
+Started PUT "/blogposts/2" for ::1 at 2020-02-24 18:29:12 -0700
+Processing by BlogpostsController#update as JSON
+  Parameters: {"subject"=>"Gainvest and Interesting Starup2", "content"=>"The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup ssDsadaSDasd", "id"=>"2", "blogpost"=>{"subject"=>"Gainvest and Interesting Starup2", "content"=>"The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup ssDsadaSDasd"}}
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[36mBlogpost Update (0.6ms)[0m  [1m[33mUPDATE "blogposts" SET "subject" = ?, "updated_at" = ? WHERE "blogposts"."id" = ?[0m  [["subject", "Gainvest and Interesting Starup2"], ["updated_at", "2020-02-25 01:29:12.055558"], ["id", 2]]
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 3.8ms | Allocations: 2806)
+
+
+Started POST "/blogposts" for ::1 at 2020-02-24 18:36:50 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlogpostsController#create as JSON
+  Parameters: {"subject"=>"1", "content"=>"2", "firstname"=>"Bill", "lastname"=>"Ron", "uuid"=>"1234", "blogpost"=>{"subject"=>"1", "content"=>"2", "firstname"=>"Bill", "lastname"=>"Ron", "uuid"=>"1234"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+  [1m[36mBlogpost Create (2.7ms)[0m  [1m[32mINSERT INTO "blogposts" ("subject", "content", "firstname", "lastname", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["subject", "1"], ["content", "2"], ["firstname", "Bill"], ["lastname", "Ron"], ["uuid", "1234"], ["created_at", "2020-02-25 01:36:50.296711"], ["updated_at", "2020-02-25 01:36:50.296711"]]
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+Completed 200 OK in 46ms (Views: 0.5ms | ActiveRecord: 4.0ms | Allocations: 2357)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:36:50 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1318)
+
+
+Started POST "/blogposts" for ::1 at 2020-02-24 18:36:58 -0700
+Processing by BlogpostsController#create as JSON
+  Parameters: {"subject"=>"a", "content"=>"b", "firstname"=>"Bill", "lastname"=>"Ron", "uuid"=>"1234", "blogpost"=>{"subject"=>"a", "content"=>"b", "firstname"=>"Bill", "lastname"=>"Ron", "uuid"=>"1234"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+  [1m[36mBlogpost Create (0.6ms)[0m  [1m[32mINSERT INTO "blogposts" ("subject", "content", "firstname", "lastname", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["subject", "a"], ["content", "b"], ["firstname", "Bill"], ["lastname", "Ron"], ["uuid", "1234"], ["created_at", "2020-02-25 01:36:58.708103"], ["updated_at", "2020-02-25 01:36:58.708103"]]
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 1.8ms | Allocations: 2344)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:36:58 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1476)
+
+
+Started PUT "/blogposts/4" for ::1 at 2020-02-24 18:37:14 -0700
+Processing by BlogpostsController#update as JSON
+  Parameters: {"subject"=>"1 edit", "content"=>"2 edit", "id"=>"4", "blogpost"=>{"subject"=>"1 edit", "content"=>"2 edit"}}
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[36mBlogpost Update (0.6ms)[0m  [1m[33mUPDATE "blogposts" SET "subject" = ?, "content" = ?, "updated_at" = ? WHERE "blogposts"."id" = ?[0m  [["subject", "1 edit"], ["content", "2 edit"], ["updated_at", "2020-02-25 01:37:14.637807"], ["id", 4]]
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 2.6ms | Allocations: 2832)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:37:39 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1476)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:39:03 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1476)
+
+
+Started PUT "/blogposts/4" for ::1 at 2020-02-24 18:39:10 -0700
+Processing by BlogpostsController#update as JSON
+  Parameters: {"subject"=>"1 edit1", "content"=>"2 edit", "id"=>"4", "blogpost"=>{"subject"=>"1 edit1", "content"=>"2 edit"}}
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[36mBlogpost Update (2.3ms)[0m  [1m[33mUPDATE "blogposts" SET "subject" = ?, "updated_at" = ? WHERE "blogposts"."id" = ?[0m  [["subject", "1 edit1"], ["updated_at", "2020-02-25 01:39:10.835286"], ["id", 4]]
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+Completed 200 OK in 12ms (Views: 0.6ms | ActiveRecord: 4.4ms | Allocations: 2798)
+
+
+Started PUT "/blogposts/5" for ::1 at 2020-02-24 18:42:38 -0700
+Processing by BlogpostsController#update as JSON
+  Parameters: {"subject"=>"a", "content"=>"b2", "id"=>"5", "blogpost"=>{"subject"=>"a", "content"=>"b2"}}
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[36mBlogpost Update (2.6ms)[0m  [1m[33mUPDATE "blogposts" SET "content" = ?, "updated_at" = ? WHERE "blogposts"."id" = ?[0m  [["content", "b2"], ["updated_at", "2020-02-25 01:42:38.864369"], ["id", 5]]
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 6.3ms | Allocations: 2799)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:48:50 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1500)
+
+
+Started PUT "/blogposts/4" for ::1 at 2020-02-24 18:48:56 -0700
+Processing by BlogpostsController#update as JSON
+  Parameters: {"subject"=>"1 edit12", "content"=>"2 edit", "id"=>"4", "blogpost"=>{"subject"=>"1 edit12", "content"=>"2 edit"}}
+  [1m[36mBlogpost Load (0.4ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[36mBlogpost Update (1.3ms)[0m  [1m[33mUPDATE "blogposts" SET "subject" = ?, "updated_at" = ? WHERE "blogposts"."id" = ?[0m  [["subject", "1 edit12"], ["updated_at", "2020-02-25 01:48:56.112520"], ["id", 4]]
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 3.0ms | Allocations: 2819)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:50:33 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 1476)
+
+
+Started PUT "/blogposts/5" for ::1 at 2020-02-24 18:50:41 -0700
+Processing by BlogpostsController#update as JSON
+  Parameters: {"subject"=>"a2", "content"=>"b2", "id"=>"5", "blogpost"=>{"subject"=>"a2", "content"=>"b2"}}
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[36mBlogpost Update (2.1ms)[0m  [1m[33mUPDATE "blogposts" SET "subject" = ?, "updated_at" = ? WHERE "blogposts"."id" = ?[0m  [["subject", "a2"], ["updated_at", "2020-02-25 01:50:41.962646"], ["id", 5]]
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 4.9ms | Allocations: 2798)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:51:05 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1476)
+
+
+Started PUT "/blogposts/4" for ::1 at 2020-02-24 18:51:14 -0700
+Processing by BlogpostsController#update as JSON
+  Parameters: {"subject"=>"1 edit123", "content"=>"2 edit", "id"=>"4", "blogpost"=>{"subject"=>"1 edit123", "content"=>"2 edit"}}
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[36mBlogpost Update (4.2ms)[0m  [1m[33mUPDATE "blogposts" SET "subject" = ?, "updated_at" = ? WHERE "blogposts"."id" = ?[0m  [["subject", "1 edit123"], ["updated_at", "2020-02-25 01:51:14.531060"], ["id", 4]]
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+Completed 200 OK in 17ms (Views: 0.7ms | ActiveRecord: 6.4ms | Allocations: 2799)
+
+
+Started PUT "/blogposts/4" for ::1 at 2020-02-24 18:51:18 -0700
+Processing by BlogpostsController#update as JSON
+  Parameters: {"subject"=>"1 edit1234", "content"=>"2 edit", "id"=>"4", "blogpost"=>{"subject"=>"1 edit1234", "content"=>"2 edit"}}
+  [1m[36mBlogpost Load (1.4ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[36mBlogpost Update (2.6ms)[0m  [1m[33mUPDATE "blogposts" SET "subject" = ?, "updated_at" = ? WHERE "blogposts"."id" = ?[0m  [["subject", "1 edit1234"], ["updated_at", "2020-02-25 01:51:18.272788"], ["id", 4]]
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+Completed 200 OK in 21ms (Views: 0.4ms | ActiveRecord: 12.9ms | Allocations: 2798)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 18:51:39 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1476)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 19:09:10 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.4ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 27ms (Views: 22.1ms | ActiveRecord: 1.8ms | Allocations: 7271)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 19:09:20 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1493)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 19:09:56 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 1493)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 19:14:58 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1493)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 19:15:15 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 1493)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 19:16:29 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 1476)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 19:16:49 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1476)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 19:19:12 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1476)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 19:19:53 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1476)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 19:22:01 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 1476)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 19:22:16 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1476)
+
+

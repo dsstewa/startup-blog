@@ -16,46 +16,49 @@ export default class Editblog extends PureComponent {
   };
 
   handleSubmit = event => {
+    console.log("a");
     event.preventDefault();
     this.props.updateBlogPost(this.state);
     this.setState({
       redirect: true
     });
+    console.log("e");
   };
 
   render() {
+    console.log("rednering");
     const redirect = this.state.redirect;
     if (redirect) {
-      return <Redirect to="/" />;
+      return <Redirect to='/' />;
     }
     return (
-      <section className="new-blog-post">
-        <div className="container">
+      <section className='new-blog-post'>
+        <div className='container'>
           <form onSubmit={this.handleSubmit}>
-            <div className="form-group p-4">
-              <label for="blogsubject">Subject</label>
+            <div className='form-group p-4'>
+              <label for='blogsubject'>Subject</label>
               <input
-                className="form-control"
-                id="subject"
-                name="subject"
-                rows="1"
+                className='form-control'
+                id='subject'
+                name='subject'
+                rows='1'
                 defaultValue={this.props.post.subject}
                 onChange={this.handleChange}
               ></input>
-              <label for="blogbody">Blog Content</label>
+              <label for='blogbody'>Blog Content</label>
               <textarea
-                className="form-control"
-                id="content"
-                name="content"
+                className='form-control'
+                id='content'
+                name='content'
                 defaultValue={this.props.post.content}
                 onChange={this.handleChange}
-                rows="10"
+                rows='10'
               ></textarea>
               <br></br>
               <button
-                type="submit"
-                value="Submit"
-                className="btn btn-dark p-4 btn-block"
+                type='submit'
+                value='Submit'
+                className='btn btn-dark p-4 btn-block'
               >
                 Submit
               </button>
