@@ -10887,3 +10887,229 @@ Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1109)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mContact Create (1.2ms)[0m  [1m[32mINSERT INTO "contacts" ("firstName", "lastName", "email", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["firstName", "Ron"], ["lastName", "Johnson"], ["email", "Ron@Johnson.com"], ["uuid", "1239998"], ["created_at", "2020-02-19 14:44:04.596289"], ["updated_at", "2020-02-19 14:44:04.596289"]]
   [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogposts"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "blogposts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar, "content" text, "firstname" varchar, "lastname" varchar, "uuid" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "contacts"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar, "lastName" varchar, "email" varchar, "uuid" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200204172311)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200204163839);
+
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-25 00:20:15.578862"], ["updated_at", "2020-02-25 00:20:15.578862"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "d5df170fa98a06147d8ea73be5004f859a667844"], ["created_at", "2020-02-25 00:20:15.586303"], ["updated_at", "2020-02-25 00:20:15.586303"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogposts"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "blogposts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar, "content" text, "firstname" varchar, "lastname" varchar, "uuid" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "contacts"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar, "lastName" varchar, "email" varchar, "uuid" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200204172311)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200204163839);
+
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-25 00:20:15.623684"], ["updated_at", "2020-02-25 00:20:15.623684"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-02-25 00:20:15.630595"], ["key", "environment"]]
+  [1m[35m (22.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "d5df170fa98a06147d8ea73be5004f859a667844"], ["created_at", "2020-02-25 00:20:15.661971"], ["updated_at", "2020-02-25 00:20:15.661971"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlogpost Create (0.4ms)[0m  [1m[32mINSERT INTO "blogposts" ("subject", "content", "firstname", "lastname", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["subject", "Vendrix an Interesting Startup"], ["content", "The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup "], ["firstname", "Bill"], ["lastname", "Ron"], ["uuid", "1234568"], ["created_at", "2020-02-25 00:20:15.702538"], ["updated_at", "2020-02-25 00:20:15.702538"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlogpost Create (0.4ms)[0m  [1m[32mINSERT INTO "blogposts" ("subject", "content", "firstname", "lastname", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["subject", "Gainvest and Interesting Starup"], ["content", "The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup "], ["firstname", "Bill"], ["lastname", "Ron"], ["uuid", "1234568"], ["created_at", "2020-02-25 00:20:15.710228"], ["updated_at", "2020-02-25 00:20:15.710228"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mContact Create (2.3ms)[0m  [1m[32mINSERT INTO "contacts" ("firstName", "lastName", "email", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["firstName", "Bill"], ["lastName", "Ron"], ["email", "Bill@bill.com"], ["uuid", "1239998"], ["created_at", "2020-02-25 00:20:15.730706"], ["updated_at", "2020-02-25 00:20:15.730706"]]
+  [1m[35m (17.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mContact Create (0.4ms)[0m  [1m[32mINSERT INTO "contacts" ("firstName", "lastName", "email", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["firstName", "Ron"], ["lastName", "Johnson"], ["email", "Ron@Johnson.com"], ["uuid", "1239998"], ["created_at", "2020-02-25 00:20:15.758587"], ["updated_at", "2020-02-25 00:20:15.758587"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/blogposts" for ::1 at 2020-02-24 17:22:15 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.9ms | Allocations: 6908)
+
+
+Started PUT "/blogposts/2" for ::1 at 2020-02-24 17:22:20 -0700
+Processing by BlogpostsController#update as JSON
+  Parameters: {"subject"=>"Gainvest and Interesting Starup2", "content"=>"The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup ", "id"=>"2", "blogpost"=>{"subject"=>"Gainvest and Interesting Starup2", "content"=>"The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup "}}
+  [1m[36mBlogpost Load (0.3ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[36mBlogpost Update (1.7ms)[0m  [1m[33mUPDATE "blogposts" SET "subject" = ?, "updated_at" = ? WHERE "blogposts"."id" = ?[0m  [["subject", "Gainvest and Interesting Starup2"], ["updated_at", "2020-02-25 00:22:20.816380"], ["id", 2]]
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:31:in `update'
+Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 5.1ms | Allocations: 3653)
+
+
+Started DELETE "/blogposts/2" for ::1 at 2020-02-24 17:22:24 -0700
+Processing by BlogpostsController#destroy as JSON
+  Parameters: {"id"=>"2", "blogpost"=>{"id"=>"2"}}
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts" WHERE "blogposts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/blogposts_controller.rb:36:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:36:in `destroy'
+  [1m[36mBlogpost Destroy (0.4ms)[0m  [1m[31mDELETE FROM "blogposts" WHERE "blogposts"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/blogposts_controller.rb:36:in `destroy'
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:36:in `destroy'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 2393)
+
+
+Started POST "/blogposts" for ::1 at 2020-02-24 17:22:27 -0700
+Processing by BlogpostsController#create as JSON
+  Parameters: {"subject"=>"asdfas", "content"=>"dasdfa", "firstname"=>"Bill", "lastname"=>"Ron", "uuid"=>"1234", "blogpost"=>{"subject"=>"asdfas", "content"=>"dasdfa", "firstname"=>"Bill", "lastname"=>"Ron", "uuid"=>"1234"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+  [1m[36mBlogpost Create (0.6ms)[0m  [1m[32mINSERT INTO "blogposts" ("subject", "content", "firstname", "lastname", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["subject", "asdfas"], ["content", "dasdfa"], ["firstname", "Bill"], ["lastname", "Ron"], ["uuid", "1234"], ["created_at", "2020-02-25 00:22:27.772696"], ["updated_at", "2020-02-25 00:22:27.772696"]]
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 4.0ms | Allocations: 2419)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 17:22:27 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.1ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1111)
+
+
+Started POST "/blogposts" for ::1 at 2020-02-24 17:22:33 -0700
+Processing by BlogpostsController#create as JSON
+  Parameters: {"subject"=>"asdfadsfadfsad", "content"=>"asdfasdf", "firstname"=>"Bill", "lastname"=>"Ron", "uuid"=>"1234", "blogpost"=>{"subject"=>"asdfadsfadfsad", "content"=>"asdfasdf", "firstname"=>"Bill", "lastname"=>"Ron", "uuid"=>"1234"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+  [1m[36mBlogpost Create (0.7ms)[0m  [1m[32mINSERT INTO "blogposts" ("subject", "content", "firstname", "lastname", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["subject", "asdfadsfadfsad"], ["content", "asdfasdf"], ["firstname", "Bill"], ["lastname", "Ron"], ["uuid", "1234"], ["created_at", "2020-02-25 00:22:33.025535"], ["updated_at", "2020-02-25 00:22:33.025535"]]
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogposts_controller.rb:10:in `create'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 3.9ms | Allocations: 2358)
+
+
+Started GET "/blogposts" for ::1 at 2020-02-24 17:22:33 -0700
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1292)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogposts"[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "blogposts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar, "content" text, "firstname" varchar, "lastname" varchar, "uuid" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "contacts"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar, "lastName" varchar, "email" varchar, "uuid" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200204172311)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200204163839);
+
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-25 00:22:41.575474"], ["updated_at", "2020-02-25 00:22:41.575474"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "d5df170fa98a06147d8ea73be5004f859a667844"], ["created_at", "2020-02-25 00:22:41.582646"], ["updated_at", "2020-02-25 00:22:41.582646"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogposts"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "blogposts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar, "content" text, "firstname" varchar, "lastname" varchar, "uuid" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "contacts"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar, "lastName" varchar, "email" varchar, "uuid" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200204172311)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200204163839);
+
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-25 00:22:41.604374"], ["updated_at", "2020-02-25 00:22:41.604374"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-02-25 00:22:41.609448"], ["key", "environment"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "d5df170fa98a06147d8ea73be5004f859a667844"], ["created_at", "2020-02-25 00:22:41.616033"], ["updated_at", "2020-02-25 00:22:41.616033"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlogpost Create (0.4ms)[0m  [1m[32mINSERT INTO "blogposts" ("subject", "content", "firstname", "lastname", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["subject", "Vendrix an Interesting Startup"], ["content", "The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup "], ["firstname", "Bill"], ["lastname", "Ron"], ["uuid", "1234568"], ["created_at", "2020-02-25 00:22:41.644537"], ["updated_at", "2020-02-25 00:22:41.644537"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlogpost Create (0.3ms)[0m  [1m[32mINSERT INTO "blogposts" ("subject", "content", "firstname", "lastname", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["subject", "Gainvest and Interesting Starup"], ["content", "The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup "], ["firstname", "Bill"], ["lastname", "Ron"], ["uuid", "1234568"], ["created_at", "2020-02-25 00:22:41.651658"], ["updated_at", "2020-02-25 00:22:41.651658"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("firstName", "lastName", "email", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["firstName", "Bill"], ["lastName", "Ron"], ["email", "Bill@bill.com"], ["uuid", "1239998"], ["created_at", "2020-02-25 00:22:41.668544"], ["updated_at", "2020-02-25 00:22:41.668544"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("firstName", "lastName", "email", "uuid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["firstName", "Ron"], ["lastName", "Johnson"], ["email", "Ron@Johnson.com"], ["uuid", "1239998"], ["created_at", "2020-02-25 00:22:41.675391"], ["updated_at", "2020-02-25 00:22:41.675391"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/blogposts" for ::1 at 2020-02-24 17:22:53 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogpostsController#index as */*
+  [1m[36mBlogpost Load (0.2ms)[0m  [1m[34mSELECT "blogposts".* FROM "blogposts"[0m
+  ↳ app/controllers/blogposts_controller.rb:6:in `index'
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.9ms | Allocations: 6908)
+
+
