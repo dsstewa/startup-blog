@@ -1,21 +1,49 @@
-import React, { Component } from "react";
-import Blog from "./Blog";
-import Editblog from "./Editblog";
+import React, { Component } from 'react';
+import Blog from './Blog';
+import Editblog from './Editblog';
 
 export default class Blogs extends Component {
-  editBlogPost() {
-    console.log("hit the edit button");
-  }
+  state = {
+    checked: false
+  };
 
-  filterPosts = () => {
-    console.log("Hit the filterPosts");
-    const postsFiltered = this.props.blogPosts;
-    return postsFiltered;
+  handleOnChange = () => {
+    if (this.state.checked === true) {
+      this.setState({
+        checked: false
+      });
+    } else {
+      this.setState({
+        checked: true
+      });
+    }
+  };
+
+  sortPosts = () => {
+    if (this.state.checked === true) {
+      const aPosts = [...this.props.blogPosts];
+      const bPosts = aPosts.sort(function(a, b) {
+        const nameA = a.subject.toUpperCase(); // ignore upper and lowercase
+        const nameB = b.subject.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+
+        // names must be equal
+        return 0;
+      });
+
+      return bPosts;
+    } else {
+      return this.props.blogPosts;
+    }
   };
 
   render() {
-    debugger;
-    const posts = this.props.blogPosts.map(post => {
+    const posts = this.sortPosts().map(post => {
       if (post.editing === true) {
         return (
           <Editblog
@@ -41,22 +69,22 @@ export default class Blogs extends Component {
     });
 
     return (
-      <section id='blog-section' className='bg-light text-muted py-5'>
-        <div className='container'>
-          <div className='form-check text-center'>
+      <section id="blog-section" className="bg-light text-muted py-5">
+        <div className="container">
+          <div className="form-check text-center">
             <input
-              className='form-check-input'
-              type='checkbox'
-              value=''
-              id='defaultCheck1'
-              onChange={this.filterPosts}
+              className="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck1"
+              onChange={this.handleOnChange}
             />
-            <label className='form-check-label' for='defaultCheck1'>
+            <label className="form-check-label" for="defaultCheck1">
               Default checkbox
             </label>
           </div>
 
-          <div className='col text-left'>{posts}</div>
+          <div className="col text-left">{posts}</div>
         </div>
       </section>
     );
